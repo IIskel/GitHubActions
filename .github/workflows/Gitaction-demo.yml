@@ -13,7 +13,9 @@ on:
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
+env: 
+  Day_Of_Week: Monday
+  testvar: day_1
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
@@ -29,6 +31,9 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: echo Hello, world!
+      
+      - name: 'Running environment Variable'
+        run: echo "Today is $testvar or $Day_Of_Week"
 
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
