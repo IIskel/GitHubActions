@@ -52,7 +52,7 @@ jobs:
           # pip install -r requirements.txt # Uncomment if you have dependencies
 
       - name: Run Python Script
-        run: python pyt.py # Replace with your script name/path
+        run: python scripts/myscript.py # Replace with your script name/path
        
   build-api:
     needs: build-app
