@@ -51,8 +51,12 @@ jobs:
           python -m pip install --upgrade pip
           # pip install -r requirements.txt # Uncomment if you have dependencies
 
+      - name: List files (debugging)
+        run: ls -R
+       
+
       - name: Run Python Script
-        run: python scripts/myscript.py # Replace with your script name/path
+        run: python .scripts/myscript.py # Replace with your script name/path
        
   build-api:
     needs: build-app
