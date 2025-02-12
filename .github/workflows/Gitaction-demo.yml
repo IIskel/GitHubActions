@@ -40,11 +40,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
-      - name: Run Python Script
-        run: |
-          cat > pyt.txt
-            print("Hello World!")
-          python3 pyt.txt
+
             
   build-api:
     needs: build-app
@@ -62,3 +58,4 @@ jobs:
     runs-on: macos-latest
     steps:
       - run: echo "Hello MAC"
+
